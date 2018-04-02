@@ -2,8 +2,8 @@ var express = require("express");
 var app = express();
 var port = process.env.PORT || 3000;
 
-var mongoose = require("mongoose");
-var bodyParse = require("body-parser");
+//var mongoose = require("mongoose");
+//var bodyParse = require("body-parser");
 
 //var User = require('./models/account');
 
@@ -27,7 +27,7 @@ mongoose.connect('mongodb://List:12345@ds227459.mlab.com:27459/tes');
 
 //var routes = require('./routes/accountRoute');
 
-routes(app);
+//routes(app);
 
 app.get("/", function(req, res){
     res.send("welcome to nodejs in heroku ! ");
