@@ -1,6 +1,6 @@
 module.exports = function(app){
     var todoList = require('../controllers/accountControllers');
 
-    app.route("/")
+    app.route('/')
         .get(todoList.Start);
 }
