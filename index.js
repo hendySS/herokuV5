@@ -6,9 +6,13 @@ var mongoose = require('mongoose');
 var People = require('./models/accountModels');
 
 var bodyParser = require('body-parser');
+var path = require("path");
 
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/Coba');
+
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
