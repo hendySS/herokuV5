@@ -19,10 +19,10 @@ mongoose.connect('mongodb://List:12345@ds227459.mlab.com:27459/tes');
     next();
   });
 */
-app.use(express.static(path.join(__dirname, 'public')));
+//app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(bodyParse.json());
-app.use(bodyParse.urlencoded({extended : true}));
+//app.use(bodyParse.json());
+//app.use(bodyParse.urlencoded({extended : true}));
 //app.use(session({secret:"kajsdkasjdhaskjshsdf", resave:false, saveUninitialized:true}));
 
 //var routes = require('./routes/accountRoute');
