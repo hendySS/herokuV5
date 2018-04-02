@@ -4,7 +4,7 @@ var port = process.env.PORT || 3000;
 
 
 app.get('/', function(req, res){
-    res.sendFile(path.join(__dirname + 'public/index.html'));
+    res.send("Online with heroku");
 });
 
 app.listen(port);
