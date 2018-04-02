@@ -4,7 +4,6 @@ var port = process.env.PORT || 3000;
 
 var mongoose = require("mongoose");
 var bodyParse = require("body-parser");
-
 var User = require('./models/account');
 
 var path = require("path");
@@ -19,19 +18,18 @@ app.all('*', function(req, res, next) {
     next();
   });
 
-app.use(express.static(path.join(__dirname, 'public')));
+
+app.get('/', function(req, res){
+    res.sendFile(path.join(__dirname + 'public/index.html'));
+});
 
 app.use(bodyParse.json());
-app.use(bodyParse.urlencoded({extended : true}));
+app.use(bodyParse.urlencoded({extended : false}));
 //app.use(session({secret:"kajsdkasjdhaskjshsdf", resave:false, saveUninitialized:true}));
 
 var routes = require('./routes/accountRoute');
 
 routes(app);
-
-app.get("/", function(req, res){
-    res.send("welcome to nodejs in heroku ! ");
-});
 
 app.listen(port);
 
