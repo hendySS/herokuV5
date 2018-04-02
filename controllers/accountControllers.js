@@ -4,8 +4,8 @@ var mongoose = require('mongoose'),
   exports.Start = function(req, res){
     var People1 = new People({
         _id: new mongoose.Types.ObjectId(),
-        name: "coba1",
-        email: "coba1@",
+        name: "coba2",
+        email: "coba2@",
     });
       
       
